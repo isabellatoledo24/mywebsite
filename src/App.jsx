@@ -255,7 +255,7 @@ return (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaLinkedin className="text-3xl text-gray-800" />
+          <FaLinkedin className="text-3xl text-gray-800 hover:scale-110 transition-transform" />
         </a>
         <a
           href="mailto:isabella.toledo2016@gmail.com"
