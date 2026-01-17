@@ -1,56 +1,74 @@
-import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'
-import './App.css'
-import profilePic from './assets/profile-pic.jpeg'
-import showJumping from './assets/jumping.jpeg'
-import columbiaPic from './assets/columbia.png'
+import { useEffect, useRef, useState } from "react";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import "./App.css";
+
+import profilePic from "./assets/profile-pic.jpeg";
+import showJumping from "./assets/jumping.jpeg";
+import columbiaPic from "./assets/columbia.png";
+
+/* ---------- Typing Effect Component ---------- */
 function TypingEffect({ text, speed = 50, delay = 0 }) {
-  const [displayedText, setDisplayedText] = useState('')
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [started, setStarted] = useState(false)
+  const [displayedText, setDisplayedText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [started, setStarted] = useState(false);
 
   useEffect(() => {
-    const delayTimer = setTimeout(() => {
-      setStarted(true)
-    }, delay)
-    return () => clearTimeout(delayTimer)
-  }, [delay])
+    const delayTimer = setTimeout(() => setStarted(true), delay);
+    return () => clearTimeout(delayTimer);
+  }, [delay]);
 
   useEffect(() => {
-    if (!started || currentIndex >= text.length) return
+    if (!started || currentIndex >= text.length) return;
 
     const timer = setTimeout(() => {
-      setDisplayedText(prev => prev + text[currentIndex])
-      setCurrentIndex(prev => prev + 1)
-    }, speed)
+      setDisplayedText((prev) => prev + text[currentIndex]);
+      setCurrentIndex((prev) => prev + 1);
+    }, speed);
 
-    return () => clearTimeout(timer)
-  }, [currentIndex, text, speed, started])
+    return () => clearTimeout(timer);
+  }, [currentIndex, text, speed, started]);
 
   return (
     <span>
       {displayedText}
       {currentIndex < text.length && <span className="cursor">|</span>}
     </span>
-  )
+  );
 }
-function App() {
-  const [page, setPage] = useState('home')
-  const [isTransitioning, setIsTransitioning] = useState(false)
+
+
+export default function App() {
+  const [page, setPage] = useState("home");
 
 return (
     <>
       {/* Navigation */}
       <nav className="nav">
-        <div className="nav-name" onClick={() => setPage('home')}> Isabella Toledo </div>
+        <div className="nav-name" onClick={() => {
+          setPage('home')
+          window.scrollTo(0, 0)
+        }}> Isabella Toledo </div>
         <ul className="nav-links">
-          <li onClick={() => setPage('home')}>Home</li>
-          <li onClick={() => setPage('about')}>About</li>
-          <li onClick={() => setPage('resume')}>Resume</li>
-          <li onClick={() => setPage('projects')}>Projects</li>
-          <div className="contact"><li onClick={() => setPage('contact')}>Contact</li></div>
+          <li onClick={() => {
+            setPage('home')
+            window.scrollTo(0, 0)
+            }}>Home</li>
+          <li onClick={() => {
+            setPage('about')
+            window.scrollTo(0, 0)
+          }}>About</li>
+          <li onClick={() => {
+            setPage('resume')
+            window.scrollTo(0, 0)
+          }}>Resume</li>
+          <li onClick={() => {
+            setPage('projects')
+            window.scrollTo(0, 0)
+          }}>Projects</li>
+          <div className="contact"><li onClick={() => {
+            setPage('contact')
+            window.scrollTo(0, 0)
+          }}>Contact</li></div>
         </ul>
       </nav>
 
@@ -245,7 +263,7 @@ return (
       </div>
         
       )}
-{
+
   <footer className="footer">
     <div className="footer-content">
       <p className="footer-text">&copy; 2025 Isabella Toledo</p>
@@ -274,9 +292,7 @@ return (
       </div>
     </div>
   </footer>
-}
   </>
 )
 }
 
-export default App
