@@ -179,20 +179,20 @@ h2 {
   margin-top: 90px;
   margin-bottom: 40px;
   font-weight: 1000;
-  font-size: 32px;
+  font-size: 28px;
   font-family: "Merriweather", serif;
 }
 
 h4 {
   font-weight: bold;
   margin-top: 10px;
-  font-size: 23px
+  font-size: 20px
 
 }
 
 p {
   line-height: 38px;
-  font-size: 18px;
+  font-size: 15px;
   font-family: "Roboto Slab", sans-serif;
 
 }
@@ -363,9 +363,9 @@ p {
 }
 .skills {
   line-height: 2;
-  font-size: 18px;
+  font-size: 15px;
   font-family: "Roboto Slab", sans-serif;
-  margin-bottom: 5px
+  margin-bottom: 8px
 }
 
 .contact-button {
