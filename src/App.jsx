@@ -5,6 +5,9 @@ import "./App.css";
 import profilePic from "./assets/profile-pic.jpeg";
 import showJumping from "./assets/jumping.jpeg";
 import columbiaPic from "./assets/columbia.png";
+import baby1 from "src/assets/baby 1.jpeg";
+import baby2 from "src/assets/baby 2.jpeg";
+import gradiationPic from "src/assets/graduation.jpegg"
 
 /* ---------- Typing Effect Component ---------- */
 function TypingEffect({ text, speed = 50, delay = 0 }) {
@@ -72,7 +75,6 @@ return (
         </ul>
       </nav>
 
-      {/* Page Content */}
       {page === 'home' && (
         <div className="home-page">
           <img
@@ -100,10 +102,66 @@ return (
       )}
 
       {page === 'about' && (
+  
         <div className="about-page">
           <h1 className="page-title">
           <TypingEffect text="About Me" speed={80} delay={0} />
           </h1>
+          <div className="about-timeline reveal">
+            <h2 className="timeline-title">My Journey</h2>
+            <div className="timeline">
+              <div className="timeline-item">
+                <span className="timeline-dot" />
+                <div className="timeline-row">
+                <div className="timeline-content">
+                  <h4> 2006 </h4>
+                  <p> I was born in Miami, Florida</p>
+                </div>
+                <img
+                    src={baby1}
+                    alt="Born in Miami"
+                    className="timeline-image"
+                  />
+                </div>
+              </div>
+              <div className="timeline-item">
+                <span className="timeline-dot" />
+                <div className="timeline-row">
+                <div className="timeline-content">
+                  <h4> 2007 </h4>
+                  <p> I moved to São Paulo, Brazil </p>
+                </div>
+                <img
+                    src={baby2}
+                    alt="Moved to Brazil"
+                    className="timeline-image"
+                  />
+                </div>
+              </div>
+            <div className="timeline-item">
+                <span className="timeline-dot" />
+                <div className="timeline-row">
+                <div className="timeline-content">
+                  <h4> 2007 - 2018 </h4>
+                  <p> Attended 3 different international schools, and in 2018, moved to St.Paul's School to finish my high school degree. </p>
+                </div>
+                
+                </div>
+              </div>
+            <div className="timeline-item">
+                <span className="timeline-dot" />
+                <div className="timeline-row">
+                <div className="timeline-content">
+                  <h4> 2025 </h4>
+                  <p> Started my academic journey at Columbia University as an Industrial Engineering and Applied Sciences major! </p>
+                </div>
+                <img 
+                src={columbiaPic} 
+                alt="Isabella Toledo" 
+                className="cu-pic float"/>
+              </div>
+          </div>
+          </div>
           <div className="page-content pop-in-3">
           <div className="about-row1">
             <img 
@@ -122,7 +180,7 @@ return (
           <div className="about-row2">
           <div className="about-2">
             <p className="paragraph">My interests lie in the areas of <strong>decentralized finance and blockchain technology</strong>, particularly in how technology can make financial services more efficient and accessible.</p>
-            <p></p>
+  
             <p className="paragraph">My hobbies are <strong> equestrian show jumping, playing the piano and reading! </strong></p>
           </div>
 
@@ -146,7 +204,8 @@ return (
       </div>
       </div>
       </div>
-      )}
+      </div>
+  )}
 
       {page === 'resume' && (
     <div className="resume-page">

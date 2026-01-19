@@ -278,6 +278,69 @@ p {
   padding: 2rem;
   margin: -2rem;
 }
+
+/* ---------- Timeline ---------- */
+
+.about-timeline {
+  margin-top: 140px;
+}
+
+.timeline-title {
+  margin-bottom: 60px;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  border-left: 2px solid #0d706b;
+  padding-left: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  position: relative;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -51px;
+  top: 8px;
+
+  width: 16px;
+  height: 16px;
+  background-color: #0d706b;
+  border-radius: 50%;
+}
+
+.timeline-content h4 {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.timeline-content p {
+  margin: 0;
+  opacity: 0.85;
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  align-items: center;
+  gap: 3rem;
+}
+
+.timeline-item:nth-child(even) .timeline-row {
+  grid-template-columns: 260px 1fr;
+}
+
+.timeline-item:nth-child(even) .timeline-image {
+  order: -1;
+}
 .about-row1 {
   display: flex;
   align-items: center;
