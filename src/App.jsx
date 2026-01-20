@@ -266,6 +266,7 @@ return (
     </div>
   </div>
 )}
+
 {page === 'resume' && (
   <div className="resume-page">
     <div className="resume-header">
@@ -342,7 +343,7 @@ return (
 
       <div className="contact-left">
         <h1 className="contact-title">
-          <TypingEffect text="Contact" speed={80} />
+          <TypingEffect text="CONTACT" speed={80} />
         </h1>
       </div>
 
@@ -388,7 +389,7 @@ return (
     <div className="projects-layout">
       <div className="projects-header-section">
         <h1 className="projects-main-title">
-          <TypingEffect text="Projects" speed={80} />
+          <TypingEffect text="PROJECTS & SERVICES" speed={80} />
         </h1>
       </div>
       

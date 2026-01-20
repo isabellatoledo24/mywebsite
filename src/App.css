@@ -55,7 +55,7 @@
   pointer-events: none;
   z-index: 0;
   background-image:
-    radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px);
+    radial-gradient(circle, rgba(255, 255, 255, 0.559) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
@@ -729,22 +729,23 @@ p {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
+  text-align: center
 }
 
 .resume-content h2 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   color: #09524e;
-  margin-top: 40px;
+  margin-top: 100px;
   margin-bottom: 20px;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .resume-content h4 {
   font-size: 1.2rem;
   color: #2c3e50;
-  margin-top: 20px;
-  margin-bottom: 8px;
-  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: 700;
 }
 
 .resume-content p {
@@ -1095,8 +1096,12 @@ p {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-
+  
   align-items: flex-start; 
+}
+
+.contact-title {
+  color: #09534f
 }
 
 .contact-link {
@@ -1117,7 +1122,7 @@ p {
 }
 
 .contact-text {
-  color: #0d706b;
+  color: #179790;
 }
 
 .contact-link:hover {
