@@ -13,6 +13,7 @@ import EEPic from "./assets/ee.png";
 import googlePic from "./assets/google.png";
 import mathPic from "./assets/math-ia.png";
 import tutoringPic from "./assets/tutoring.jpg";
+import stpPic from "./assets/stpauls.jpeg"
 
 /* ---------- Typing Effect Component ---------- */
 function TypingEffect({ text, speed = 50, delay = 0 }) {
@@ -151,6 +152,11 @@ return (
               <h4> 2007 - 2018 </h4>
               <p> Attended 3 different international schools, and in 2018, moved to St.Paul's School to finish my high school degree. </p>
             </div>
+            <img 
+              src={stpPic} 
+              alt="St Paul's" 
+              className="timeline-image"
+            />
           </div>
         </div>
         
