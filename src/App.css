@@ -21,7 +21,7 @@
     gradientShift 8s ease infinite,
     gradientPulse 8s ease-in-out infinite;
   overflow: hidden;
-  padding-bottom: 120px !important; /* Add this */
+  padding-bottom: 120px !important; 
 }
 
 
@@ -196,6 +196,7 @@ body {
   background-color: #e0f7f7;
   color: #333;
 }
+
 
 #root {
   width: 100%;
@@ -1141,7 +1142,7 @@ p {
   color: black;
   padding-left: 3rem;
   padding-right: 3rem;
-
+  z-index: 2;
 }
 
 .footer-content {
