@@ -15,6 +15,35 @@ import mathPic from "./assets/math-ia.png";
 import tutoringPic from "./assets/tutoring.jpg";
 import stpPic from "./assets/stpauls.jpeg"
 
+import gallery1 from './assets/gallery1.jpeg';
+import gallery2 from './assets/gallery2.jpeg';
+import gallery3 from './assets/gallery3.jpeg';
+import gallery4 from './assets/gallery4.jpeg';
+import gallery5 from './assets/gallery5.jpeg';
+import gallery6 from './assets/gallery6.jpeg';
+import gallery7 from './assets/gallery7.jpeg';
+import gallery8 from './assets/gallery8.jpeg';
+import gallery9 from './assets/gallery9.jpeg';
+import gallery10 from './assets/gallery10.jpeg';
+import gallery11 from './assets/gallery11.jpeg';
+import gallery12 from './assets/gallery12.jpeg';
+import gallery13 from './assets/gallery13.jpeg';
+import gallery14 from './assets/gallery14.jpeg';
+import gallery15 from './assets/gallery15.jpeg';
+import gallery16 from './assets/gallery16.jpeg';
+import gallery17 from './assets/gallery17.jpeg';
+import gallery18 from './assets/gallery18.jpeg';
+import gallery19 from './assets/gallery19.jpeg';
+import gallery20 from './assets/gallery20.jpeg';
+import gallery21 from './assets/gallery21.jpeg';
+import gallery22 from './assets/gallery22.jpeg';
+import gallery23 from './assets/gallery23.jpeg';
+import gallery24 from './assets/gallery24.jpeg';
+import gallery25 from './assets/gallery25.jpeg';
+import gallery26 from './assets/gallery26.jpeg';
+import gallery27 from './assets/gallery27.jpeg';
+import gallery28 from './assets/gallery28.jpeg';
+
 /* ---------- Typing Effect Component ---------- */
 function TypingEffect({ text, speed = 50, delay = 0 }) {
   const [displayedText, setDisplayedText] = useState("");
@@ -45,9 +74,57 @@ function TypingEffect({ text, speed = 50, delay = 0 }) {
   );
 }
 
-
 export default function App() {
   const [page, setPage] = useState("home");
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const images = [
+    { id: 1, src: gallery1 },
+    { id: 2, src: gallery2 },
+    { id: 4, src: gallery4 },
+    { id: 5, src: gallery5 },
+    { id: 6, src: gallery6 },
+    { id: 7, src: gallery26 },
+    { id: 8, src: gallery11 },
+    { id: 9, src: gallery7 },
+    { id: 10, src: gallery8  },
+    { id: 11, src: gallery10 },
+    { id: 12, src: gallery12 },
+    { id: 13, src: gallery13  },
+    { id: 14, src: gallery14 },
+    { id: 15, src: gallery15  },
+    { id: 16, src: gallery16 },
+    { id: 17, src: gallery17 },
+    { id: 18, src: gallery18 },
+    { id: 19, src: gallery19 },
+    { id: 20, src: gallery20 },
+    { id: 21, src: gallery21 },
+    { id: 22, src: gallery23 },
+    { id: 23, src: gallery9 },
+    { id: 26, src: gallery28 },
+    { id: 27, src: columbiaPic },
+    { id: 28, src: gallery22 },
+  ];
+
+  const itemsToShow = 3;
+  const maxIndex = Math.max(0, images.length - itemsToShow);
+
+  const goToSlide = (index) => {
+    const newIndex = Math.max(0, Math.min(index, maxIndex));
+    setCurrentIndex(newIndex);
+  };
+
+  const prevSlide = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+
+  const nextSlide = () => {
+    if (currentIndex < maxIndex) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
 
 return (
     <>
@@ -120,7 +197,7 @@ return (
           <div className="timeline-row">
             <div className="timeline-content">
               <h4> 2006 </h4>
-              <p> I was born in Miami, Florida</p>
+              <p> I was born in Miami, Florida. </p>
             </div>
             <img
               src={baby1}
@@ -135,7 +212,7 @@ return (
           <div className="timeline-row">
             <div className="timeline-content">
               <h4> 2007 </h4>
-              <p> I moved to São Paulo, Brazil </p>
+              <p> I moved to São Paulo, Brazil, where I grew up in a multicultural household with German, Norwegian, Argentinian and Italian Heritage. Fun fact: I have 3 passports! </p>
             </div>
             <img
               src={baby2}
@@ -257,6 +334,47 @@ return (
           </div>
         </div>
       </div>
+
+    <div className="gallery-wrapper">
+      <h2 className="section-title"> My Gallery! </h2>
+    <button 
+      className="arrow prev" 
+      onClick={prevSlide}
+      disabled={currentIndex === 0}
+    >
+      ❮
+    </button>
+    
+    <div className="thumbnail-container">
+      <div 
+        className="thumbnail-track" 
+        style={{ transform: `translateX(-${currentIndex * 220}px)` }}
+      >
+        {images.map((img, index) => (
+          <div 
+            key={img.id} 
+            className="thumbnail-item"
+            onClick={() => goToSlide(index)}
+          >
+            <img 
+              src={img.src} 
+              alt={img.label} 
+              className="thumbnail-img" 
+            />
+            <div className="thumbnail-label">{img.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  
+    <button 
+      className="arrow next" 
+      onClick={nextSlide}
+      disabled={currentIndex >= maxIndex}
+    >
+      ❯
+    </button>
+  </div>
 
       <div className="about-actions">
         <button
@@ -505,6 +623,6 @@ return (
     </div>
   </footer>
   </>
-)
+  );
 }
 
