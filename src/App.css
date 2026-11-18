@@ -345,7 +345,10 @@ p {
 .home-title {
   margin-bottom: 10px
 }
-
+.subtitle {
+  font-size: 1.3rem;
+  font-weight: 450
+}
 .subtitle-2 {
   margin-top: 50px;
   font-size: 1rem
@@ -757,7 +760,8 @@ p {
   text-align: center;
 }
 
-.arrow {
+/* Change from .arrow to .gallery-arrow */
+.gallery-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -776,28 +780,27 @@ p {
   z-index: 10;
 }
 
-.arrow:hover {
+.gallery-arrow:hover {
   background: white;
   transform: translateY(-50%) scale(1.1);
 }
 
-.arrow:disabled {
+.gallery-arrow:disabled {
   opacity: 0.3;
   cursor: not-allowed;
 }
 
-.arrow:disabled:hover {
+.gallery-arrow:disabled:hover {
   transform: translateY(-50%) scale(1);
 }
 
-.arrow.prev {
+.gallery-arrow.prev {
   left: 0;
 }
 
-.arrow.next {
+.gallery-arrow.next {
   right: 0;
 }
-
   
   
 

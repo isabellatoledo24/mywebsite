@@ -170,7 +170,7 @@ return (
           <h1>
           <TypingEffect text="Hi, I'm Isabella!" speed={80} />
           </h1>
-          <p className="subtitle"> Aspiring Engineer & Entrepreneur</p>
+          <p className="subtitle"> Aspiring Financial Engineer and Asset Manager</p>
           <p className="subtitle-2"> 📍 <em> New York, New York </em> </p>
           <button
             className="about-button pop-in-2"
@@ -275,7 +275,7 @@ return (
           Interests
         </h2>
         <p className="section-text">
-          My interests lie in the areas of <strong>decentralized finance and blockchain technology</strong>, particularly in how technology can make financial services more efficient and accessible.
+          My interests lie in the areas of <strong>financial markets, decentralized finance, blockchain technology, and AI </strong>, particularly in how technology can make financial services more efficient and accessible.
         </p>
       </div>
 
@@ -290,7 +290,7 @@ return (
               <span className="hobby-icon">🐴</span>
               <h3>Equestrian Show Jumping</h3>
             </div>
-            <p>I have been show jumping competitively since the age of 10. It is my favourite thing in the world! I am currently jumping 1.30 meters and am excited to be joining Columbia's Equestrian Team!</p>
+            <p>I have been show jumping competitively since the age of 10. Some of my notable achievements in the sport include: 1st place in the National Indoor Championship in 2022; 1st place in the National Brazilian Horse Show Championship in 2022, Ranked #1 Rider by the Sao Paulo State Equestrian Federation for the year 2023; Vice-Champion of the Sao Paulo State Championship in 2023</p>
           </div>
 
           <div className="hobby-card">
@@ -314,7 +314,7 @@ return (
               <span className="hobby-icon">🎧</span>
               <h3>Listening to Podcasts</h3>
             </div>
-            <p>To stay informed, I listen to BBC's Global News Podcast and the Financial Times' Daily News Briefings every day. I also love music!</p>
+            <p>I love listening to podcasts to stay informed about what is happening around the world. Favorite podcasts: FT News Briefing, BBC Global News Podcast, Morning Call BTG Pactual, Bloomberg Daybreak, The Rachman Review. </p>
             <a 
               href="https://open.spotify.com/user/isabella.toledo2016?si=80d48eb038714684" 
               target="_blank" 
@@ -325,20 +325,14 @@ return (
             </a>
           </div>
 
-          <div className="hobby-card">
-            <div className="hobby-header">
-              <span className="hobby-icon">👨‍🍳</span>
-              <h3>Watching Cooking Shows</h3>
-            </div>
-            <p>Although I'm not the best cook myself, I love watching cooking shows and learning new techniques and recipes!</p>
-          </div>
+          
         </div>
       </div>
 
     <div className="gallery-wrapper">
       <h2 className="section-title"> My Gallery! </h2>
     <button 
-      className="arrow prev" 
+      className="gallery-arrow prev" 
       onClick={prevSlide}
       disabled={currentIndex === 0}
     >
@@ -368,7 +362,7 @@ return (
     </div>
   
     <button 
-      className="arrow next" 
+      className="gallery-arrow next" 
       onClick={nextSlide}
       disabled={currentIndex >= maxIndex}
     >
@@ -398,8 +392,8 @@ return (
         <TypingEffect text="RESUME" speed={80} />
       </h1>
       <a 
-        href="/mywebsite/Isabella_Toledo_Resume.pdf" 
-        download="Isabella_Toledo_Resume.pdf"
+        href="mywebsite/public/Isabella_Toledo_Resume_Nov2026.pdf" 
+        download="Isabella_Toledo_Resume_Nov2026.pdf"
         className="download-button-inline"
       >
         <span className="download-icon">📄</span>
@@ -413,23 +407,24 @@ return (
         <span className="emoji-sway">🎓</span> Education
       </h2>
       <h4>Columbia University — New York, USA — 2025-2029</h4>
-      <p>Major: Industrial Engineering and Operations Research</p>
-      <p>Minor: Economics and Entrepreneurship</p>
-      <p>Clubs: Society of Women Engineers, Engineers Without Borders, Columbia Financial Investment Group, Columbia Equestrian Club</p>
-
+      <p>Major: Financial Engineering</p>
+      <p>Minor: Economics and Artificial Intelligence</p>
+      <p>Clubs: Society of Women Engineers, Columbia Undergraduate Wealth Management Club, Columbia Emerging Markets Society, Columbia Equestrian Club, Girls Who Invest Scholars Program</p>
+      <p> Relevant Coursework: Accounting and Finance, Corporate Finance, Data Engineering with Python, Multivariable Calculus, Linear Algebra, Probability, Microeconomics, Macroeconomics </p>
       <h4>St. Paul's School — São Paulo, Brazil — 2018-2025</h4>
       <p>Diplomas: IGCSE Diploma, Brazilian High School Diploma, IB Diploma</p>
 
       <h2><span className="emoji-sway">💼</span> Work Experience</h2>
+      <h4>UBS Investment Banking — São Paulo, Brazil</h4>
+<p><em>Summer Intern · July 2026 – August 2026</em></p>
 
+<h4>Private Tutoring (Self-Employed) — São Paulo, Brazil</h4>
+<p><em>Private Tutor · 2023 – 2026</em></p>
+
+<h4>C6 Bank — São Paulo, Brazil</h4>
+<p><em>Finance Summer Job · July 2024</em></p>
       <h4>Vivo (Telefônica Brasil S.A.) — São Paulo, Brazil </h4>
       <p><em>Work Shadowing · September 2023</em></p>
-
-      <h4>C6 Bank — São Paulo, Brazil </h4>
-      <p><em>Finance Summer Job · July 2024</em></p>
-
-      <h4>Private Tutoring — São Paulo, Brazil</h4>
-      <p><em>Private Tutor · 2023 – Present</em></p>
 
       <h2><span className="emoji-sway">🛠</span> Skills</h2>
 
@@ -441,9 +436,13 @@ return (
 
       <h4>Other skills:</h4>
       <ul className="skills">
-        <li>Basic Python programming and web development</li>
-        <li>Excel Solver and optimization</li>
-        <li>Public speaking</li>
+        <li>Public speaking and formal presentations</li>
+  <li>Python and SQL programming</li>
+  <li>Web development</li>
+  <li>Excel</li>
+  <li>Financial Modeling</li>
+  <li>Bloomberg Terminal</li>
+  <li>BlackRock Aladdin</li>
       </ul>
 
       <div className="resume-actions">
@@ -551,11 +550,23 @@ return (
         <div 
           className="project-box"
           style={{backgroundImage: `url(${EEPic})`}}
-          onClick={() => window.open('/mywebsite/IB_Extended_Essay.pdf', '_blank')}
+          onClick={() => window.open('/mywebsite/EE.pdf', '_blank')}
         >
           <div className="project-overlay">
             <h3>Pathos in American Political Rhetoric</h3>
             <p className="project-meta">IB Extended Essay · 2024</p>
+            <span className="project-type">Literary Analysis</span>
+          </div>
+        </div>
+
+        <div 
+          className="project-box"
+          style={{backgroundImage: `url(${EEPic})`}}
+          onClick={() => window.open('mywebsite/public/Toledo_ESSAY3 (6).pdf', '_blank')}
+        >
+          <div className="project-overlay">
+            <h3>Unpaid Internships Under the "Primary Beneficiary" Test: Opportunity or Exploitation?</h3>
+            <p className="project-meta">University Writing Research Essay · 2024</p>
             <span className="project-type">Literary Analysis</span>
           </div>
         </div>
